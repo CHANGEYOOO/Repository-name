@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈智宇 | 美术艺术指导 · 作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F4F4F4; --bg-card: #FFFFFF; --text: #1A1A1A;
+  --text-secondary: #6B6B6B; --accent: #C0392B; --accent-light: #E74C3C;
+  --accent-secondary: #8B8B8B; --border: #E0E0E0;
+  --font-serif: 'Noto Serif SC', serif; --font-sans: 'Noto Sans SC', sans-serif;
+  --font-display: 'Cormorant Garamond', serif; --font-mono: 'DM Mono', monospace;
+  --gap: clamp(1rem, 3vw, 2.5rem);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+img{border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.nav-dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:14px}
+.nav-dots a{width:10px;height:10px;border-radius:50%;background:var(--border);transition:all .3s;display:block;text-indent:-9999px;overflow:hidden}
+.nav-dots a:hover,.nav-dots a.active{background:var(--accent);transform:scale(1.5)}
+.section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px max(8%,40px);position:relative}
+.section.content-heavy{justify-content:flex-start;min-height:auto;padding-top:100px;padding-bottom:100px}
+.section-inner{max-width:1200px;width:100%}
+.section-header{text-align:center;margin-bottom:60px}
+.section-number{font-family:var(--font-mono);font-size:.85rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--text);line-height:1.2}
+.section-subtitle{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--text-secondary);margin-top:8px}
+.divider{width:40px;height:2px;background:var(--accent);margin:24px auto}
+#cover{background:linear-gradient(135deg,var(--bg) 0%,#F0F0F0 100%);position:relative}
+.cover-accent-line{position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light))}
+.cover-content{text-align:center;position:relative;z-index:2}
+.cover-name-en{font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.4rem);color:var(--text-secondary);letter-spacing:.3em;margin-bottom:16px}
+.cover-name{font-family:var(--font-serif);font-size:clamp(3rem,8vw,6rem);font-weight:900;color:var(--text);line-height:1.1;letter-spacing:.05em}
+.cover-name .accent{background:linear-gradient(135deg,var(--accent),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cover-title{font-family:var(--font-sans);font-size:1.1rem;color:var(--text-secondary);margin-top:24px;letter-spacing:.15em}
+.cover-role{font-family:var(--font-display);font-style:italic;font-size:1.8rem;color:var(--accent);margin-top:32px}
+.cover-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.cover-scroll span{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;color:var(--text-secondary)}
+.cover-scroll-line{width:1px;height:40px;background:var(--border);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:var(--gap);align-items:center}
+.about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--border)}
+.about-text p{font-size:1.05rem;color:var(--text-secondary);margin-bottom:20px;line-height:1.9}
+.about-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.about-info-item{padding:14px 18px;border-left:2px solid var(--accent);background:var(--bg-card)}
+.about-info-label{font-family:var(--font-mono);font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.about-info-value{font-size:.95rem;color:var(--text)}
+.timeline{position:relative;padding-left:40px;max-width:800px;margin:0 auto}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:48px;padding-left:32px}
+.timeline-item::before{content:'';position:absolute;left:-45px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.timeline-year{font-family:var(--font-mono);font-size:.8rem;color:var(--accent);letter-spacing:.15em;margin-bottom:8px}
+.timeline-company{font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:var(--text)}
+.timeline-role{font-size:.95rem;color:var(--text-secondary);margin-top:4px}
+.timeline-desc{font-size:.9rem;color:var(--text-secondary);margin-top:10px;line-height:1.7}
+.highlights-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.highlight-card{background:var(--bg-card);border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.highlight-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.highlight-card-img{width:100%;height:240px;object-fit:cover}
+.highlight-card-body{padding:28px}
+.highlight-card-tag{font-family:var(--font-mono);font-size:.7rem;color:var(--accent);letter-spacing:.15em;margin-bottom:12px}
+.highlight-card-title{font-family:var(--font-serif);font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:12px}
+.highlight-card-desc{font-size:.9rem;color:var(--text-secondary);line-height:1.7}
+.highlight-stat{font-family:var(--font-mono);font-size:2.5rem;font-weight:500;color:var(--accent);margin-top:16px}
+.showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.showcase-grid img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .4s;cursor:pointer}
+.showcase-grid img:hover{transform:scale(1.05);position:relative;z-index:2}
+.category-section{margin-bottom:64px}
+.category-title{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:8px;padding-left:16px;border-left:3px solid var(--accent)}
+.category-title-en{font-family:var(--font-display);font-style:italic;font-size:1rem;color:var(--text-secondary);margin-bottom:28px;padding-left:16px}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.work-card{background:var(--bg-card);border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.work-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.work-card-img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.work-card-body{padding:20px}
+.work-card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.work-card-tag{font-family:var(--font-mono);font-size:.65rem;color:var(--accent);padding:2px 8px;border:1px solid var(--accent);letter-spacing:.05em}
+.work-card-title{font-family:var(--font-serif);font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:6px}
+.work-card-client{font-size:.8rem;color:var(--text-secondary)}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.video-card{background:var(--bg-card);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:transform .3s}
+.video-card:hover{transform:translateY(-3px)}
+.video-thumb-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#F0F0F0;overflow:hidden}
+.video-thumb-wrap img{width:100%;height:100%;object-fit:cover}
+.video-play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(192,57,43,.9);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.video-play-icon::after{content:'';width:0;height:0;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.video-card:hover .video-play-icon{transform:translate(-50%,-50%) scale(1.1);background:var(--accent)}
+.video-card-body{padding:16px}
+.video-card-title{font-family:var(--font-serif);font-size:.95rem;font-weight:600;color:var(--text)}
+.video-card-type{font-family:var(--font-mono);font-size:.65rem;color:var(--accent);letter-spacing:.08em;margin-top:4px}
+.video-player-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.92);z-index:200;justify-content:center;align-items:center}
+.video-player-overlay.active{display:flex}
+.video-player-wrapper{width:90%;max-width:960px;aspect-ratio:16/9;position:relative}
+.video-player-wrapper iframe{width:100%;height:100%;border:none}
+.video-close{position:absolute;top:-48px;right:0;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;font-family:var(--font-sans);line-height:1}
+.brands-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 40px;margin-bottom:48px}
+.brand-item{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--text-secondary);transition:color .3s}
+.brand-item:hover{color:var(--accent)}
+.artists-list{text-align:center;font-size:.95rem;color:var(--text-secondary);line-height:2}
+.artists-list strong{font-family:var(--font-serif);color:var(--text)}
+#contact{text-align:center;background:linear-gradient(180deg,var(--bg) 0%,#F0F0F0 100%)}
+.contact-name{font-family:var(--font-serif);font-size:2.5rem;font-weight:700}
+.contact-info{font-family:var(--font-mono);font-size:1.1rem;color:var(--accent);margin-top:20px}
+.contact-end{font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--text-secondary);margin-top:48px}
+.fade-in{opacity:1;transform:none}
+
+.lightbox{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.95);z-index:200;justify-content:center;align-items:center;cursor:pointer}
+.lightbox.active{display:flex}
+.lightbox img{max-width:90%;max-height:90%;object-fit:contain}
+.lightbox-close{position:absolute;top:24px;right:40px;color:#fff;font-size:2.5rem;cursor:pointer;font-family:var(--font-sans)}
+@media(max-width:1024px){.works-grid,.video-grid{grid-template-columns:repeat(2,1fr)}.showcase-grid{grid-template-columns:repeat(3,1fr)}.about-grid{grid-template-columns:1fr}.highlights-grid{grid-template-columns:1fr}.nav-dots{display:none}}
+@media(max-width:768px){.section{padding:60px 20px}.works-grid,.video-grid{grid-template-columns:1fr}.showcase-grid{grid-template-columns:repeat(2,1fr)}.timeline{padding-left:24px}.timeline-item{padding-left:20px}.about-info-grid{grid-template-columns:1fr}.cover-name{font-size:2.8rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots">
+  <a href="#cover">封面</a><a href="#about">关于</a><a href="#experience">经历</a><a href="#highlights">亮点</a><a href="#showcase">集锦</a><a href="#works">作品</a><a href="#videos">视频</a><a href="#brands">品牌</a><a href="#contact">联系</a>
+</nav>
+
+<section class="section" id="cover">
+  <div class="cover-accent-line"></div>
+  <div class="cover-content">
+    <div class="cover-name-en">VISUAL ART DIRECTOR &amp; FILMMAKER</div>
+    <h1 class="cover-name">陈<span class="accent">智</span>宇</h1>
+    <div class="cover-title">美术艺术指导 &amp; 导演</div>
+    <div class="cover-role">Creative Visual Direction</div>
+  </div>
+  <div class="cover-scroll"><span>SCROLL</span><div class="cover-scroll-line"></div></div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">01</div>
+      <h2 class="section-title">关于我</h2>
+      <div class="section-subtitle">About Me</div>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <img class="about-photo fade-in" src="images/page_001_img_01.jpg" alt="陈智宇">
+      <div class="about-text fade-in">
+        <p>善于挖掘品牌创意概念，创造独特的差异化视觉表达。在广告与直播行业拥有多年丰富经验，从TVC广告片到品牌直播间，从三维场景设计到CG导演，致力于用视觉语言为每一个品牌讲述独特故事。</p>
+        <p>毕业于北京电影学院现代创意媒体学院视觉艺术系戏剧影视美术设计专业，以系统化的美术制作流程和创新的视觉表达为核心竞争力。</p>
+        <div class="about-info-grid">
+          <div class="about-info-item"><div class="about-info-label">出生日期</div><div class="about-info-value">2000 / 04 / 04</div></div>
+          <div class="about-info-item"><div class="about-info-label">民族 / 籍贯</div><div class="about-info-value">汉族 / 绍兴</div></div>
+          <div class="about-info-item"><div class="about-info-label">学历</div><div class="about-info-value">北京电影学院 · 本科</div></div>
+          <div class="about-info-item"><div class="about-info-label">专业</div><div class="about-info-value">戏剧影视美术设计</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">02</div>
+      <h2 class="section-title">工作经历</h2>
+      <div class="section-subtitle">Experience</div>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-in"><div class="timeline-year">2025 — 2026</div><div class="timeline-company">荒原视觉工作室</div><div class="timeline-role">美术指导</div><div class="timeline-desc">品牌直播间 / TVC广告片设计搭建与拍摄，主导薇娅公司新大楼、抖音商城UR、东方甄选、河南卫视春晚等项目。</div></div>
+      <div class="timeline-item fade-in"><div class="timeline-year">2025</div><div class="timeline-company">宁波怡人玩具有限公司</div><div class="timeline-role">美术总监</div><div class="timeline-desc">大型微缩场景设计搭建，主导制定美术制作标准流程规范，道具库管理。</div></div>
+      <div class="timeline-item fade-in"><div class="timeline-year">2024</div><div class="timeline-company">至幻蘑菇</div><div class="timeline-role">三维美术师兼CG导演</div><div class="timeline-desc">效果图与三维设定图绘制，CG产品宣传片全流程导演。</div></div>
+      <div class="timeline-item fade-in"><div class="timeline-year">2023 — 2024</div><div class="timeline-company">LOOKwhat</div><div class="timeline-role">美术指导</div><div class="timeline-desc">TVC广告片 / MV全流程制作，服务网易、优酷、腾讯、小米、NARS、雀巢、极米、原神等品牌。</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="highlights">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">03</div>
+      <h2 class="section-title">项目亮点</h2>
+      <div class="section-subtitle">Highlights</div>
+      <div class="divider"></div>
+    </div>
+    <div class="highlights-grid">
+      <div class="highlight-card fade-in">
+        <img class="highlight-card-img" src="images/page_005_img_07.jpg" alt="永劫无间劫杯宣传片">
+        <div class="highlight-card-body">
+          <div class="highlight-card-tag">CASE STUDY</div>
+          <div class="highlight-card-title">永劫无间劫杯宣传片</div>
+          <div class="highlight-card-desc">精准捕捉科幻电影视觉需求，以高水准的场景设计与灯光渲染打造电影级宣传片。客户因本片视觉质量推动二次合作并指定本人负责。</div>
+          <div class="highlight-stat">×2</div>
+        </div>
+      </div>
+      <div class="highlight-card fade-in">
+        <img class="highlight-card-img" src="images/page_006_img_02.jpg" alt="工程车玩具微缩场景">
+        <div class="highlight-card-body">
+          <div class="highlight-card-tag">INNOVATION</div>
+          <div class="highlight-card-title">工程车玩具套装微缩场景</div>
+          <div class="highlight-card-desc">自主执行全流程美术制作，相比外包方案节约制作成本。创新"双向迭代验证法"，结合Blender数字建模与三维扫描技术确保场景精度。</div>
+          <div class="highlight-stat">-75%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="showcase">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">04</div>
+      <h2 class="section-title">效果图集锦</h2>
+      <div class="section-subtitle">Render Gallery</div>
+      <div class="divider"></div>
+    </div>
+    <div class="showcase-grid"><img src="images/page_007_img_04.jpg" alt="效果图集锦">
+<img src="images/page_007_img_05.jpg" alt="效果图集锦">
+<img src="images/page_007_img_06.jpg" alt="效果图集锦">
+<img src="images/page_007_img_01.jpg" alt="效果图集锦">
+<img src="images/page_008_img_04.jpg" alt="效果图集锦">
+<img src="images/page_008_img_07.jpg" alt="效果图集锦">
+<img src="images/page_008_img_03.jpg" alt="效果图集锦">
+<img src="images/page_008_img_02.jpg" alt="效果图集锦">
+</div>
+  </div>
+</section>
+
+<section class="section content-heavy" id="works">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">05</div>
+      <h2 class="section-title">案例作品</h2>
+      <div class="section-subtitle">Selected Works</div>
+      <div class="divider"></div>
+    </div>
+    
+    <div class="category-section">
+      <div class="category-title">服饰直播</div>
+      <div class="category-title-en">Fashion Livestream</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_009_img_01.jpg" alt="UR派对密码直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#UR</span></div>
+        <div class="work-card-title">UR派对密码直播间</div>
+        <div class="work-card-client">UR</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_010_img_05.jpg" alt="UR美术馆奇妙夜">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#UR</span></div>
+        <div class="work-card-title">UR美术馆奇妙夜</div>
+        <div class="work-card-client">UR</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_011_img_10.jpg" alt="美力城天猫超级时装发布">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#美力城</span></div>
+        <div class="work-card-title">美力城天猫超级时装发布</div>
+        <div class="work-card-client">美力城</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_012_img_03.jpg" alt="艾莱依天猫超级时装发布">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#艾莱依</span></div>
+        <div class="work-card-title">艾莱依天猫超级时装发布</div>
+        <div class="work-card-client">艾莱依</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_013_img_02.jpg" alt="玛丝菲尔直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#玛丝菲尔</span></div>
+        <div class="work-card-title">玛丝菲尔直播间</div>
+        <div class="work-card-client">玛丝菲尔</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_014_img_04.jpg" alt="maje直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#maje</span></div>
+        <div class="work-card-title">maje直播间</div>
+        <div class="work-card-client">maje</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_015_img_03.jpg" alt="MaxMara">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#MaxMara</span></div>
+        <div class="work-card-title">MaxMara</div>
+        <div class="work-card-client">MaxMara</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">日播间</div>
+      <div class="category-title-en">Daily Livestream</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_016_img_25.jpg" alt="东方甄选直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#东方甄选</span></div>
+        <div class="work-card-title">东方甄选直播间</div>
+        <div class="work-card-client">东方甄选</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_017_img_04.jpg" alt="林依伦直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#林依伦</span></div>
+        <div class="work-card-title">林依伦直播间</div>
+        <div class="work-card-client">林依伦</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_018_img_03.jpg" alt="蜜蜂直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#蜜蜂</span></div>
+        <div class="work-card-title">蜜蜂直播间</div>
+        <div class="work-card-client">蜜蜂</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_019_img_01.jpg" alt="琦儿直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#琦儿</span></div>
+        <div class="work-card-title">琦儿直播间</div>
+        <div class="work-card-client">琦儿</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">零食 · 美妆</div>
+      <div class="category-title-en">Food & Beauty</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_020_img_06.jpg" alt="王小卤直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#王小卤</span></div>
+        <div class="work-card-title">王小卤直播间</div>
+        <div class="work-card-client">王小卤</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_021_img_02.jpg" alt="卫龙魔芋爽">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#卫龙</span></div>
+        <div class="work-card-title">卫龙魔芋爽</div>
+        <div class="work-card-client">卫龙</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_022_img_29.jpg" alt="cici888家宴中秋直播">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#cici888</span></div>
+        <div class="work-card-title">cici888家宴中秋直播</div>
+        <div class="work-card-client">cici888</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_023_img_07.jpg" alt="LANCOME双色口红直播间">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#LANCOME</span></div>
+        <div class="work-card-title">LANCOME双色口红直播间</div>
+        <div class="work-card-client">LANCOME</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">卫视 · 综艺</div>
+      <div class="category-title-en">TV & Variety</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_024_img_06.jpg" alt="山东卫视《像羽》">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#山东卫视</span></div>
+        <div class="work-card-title">山东卫视《像羽》</div>
+        <div class="work-card-client">山东卫视</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_025_img_01.jpg" alt="山东卫视春晚《永和九年》">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#山东卫视</span></div>
+        <div class="work-card-title">山东卫视春晚《永和九年》</div>
+        <div class="work-card-client">山东卫视</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_026_img_04.jpg" alt="河南卫视春晚 · 爱他美">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#河南卫视</span></div>
+        <div class="work-card-title">河南卫视春晚 · 爱他美</div>
+        <div class="work-card-client">河南卫视</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_027_img_05.jpg" alt="王者十周年特别节目">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#王者荣耀</span></div>
+        <div class="work-card-title">王者十周年特别节目</div>
+        <div class="work-card-client">王者荣耀</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">游戏 · 电竞</div>
+      <div class="category-title-en">Gaming & Esports</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_037_img_16.jpg" alt="永劫无间劫杯宣传片">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#永劫无间</span></div>
+        <div class="work-card-title">永劫无间劫杯宣传片</div>
+        <div class="work-card-client">永劫无间</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_038_img_19.jpg" alt="永劫无间春季赛宣传片">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#永劫无间</span></div>
+        <div class="work-card-title">永劫无间春季赛宣传片</div>
+        <div class="work-card-client">永劫无间</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_046_img_08.jpg" alt="原神5.0宣传短片">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#原神</span></div>
+        <div class="work-card-title">原神5.0宣传短片</div>
+        <div class="work-card-client">原神</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_045_img_03.jpg" alt="三国谋定天下 · 古力娜扎">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#三国谋定天下</span></div>
+        <div class="work-card-title">三国谋定天下 · 古力娜扎</div>
+        <div class="work-card-client">三国谋定天下</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_050_img_08.jpg" alt="英雄联盟手游亚洲联赛">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#英雄联盟</span></div>
+        <div class="work-card-title">英雄联盟手游亚洲联赛</div>
+        <div class="work-card-client">英雄联盟</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">产品 · 科技</div>
+      <div class="category-title-en">Product & Tech</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_039_img_07.jpg" alt="BEATBOT S1 PRO泳池清洁机器人">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#BEATBOT</span></div>
+        <div class="work-card-title">BEATBOT S1 PRO泳池清洁机器人</div>
+        <div class="work-card-client">BEATBOT</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_043_img_11.jpg" alt="sugar robot方糖机器人产品视频">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#sugar robot</span></div>
+        <div class="work-card-title">sugar robot方糖机器人产品视频</div>
+        <div class="work-card-client">sugar robot</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_044_img_08.jpg" alt="极米《光影一日》">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#极米</span></div>
+        <div class="work-card-title">极米《光影一日》</div>
+        <div class="work-card-client">极米</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">乐高系列</div>
+      <div class="category-title-en">LEGO Series</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_033_img_26.jpg" alt="乐高CNY妙会开在家">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#乐高</span></div>
+        <div class="work-card-title">乐高CNY妙会开在家</div>
+        <div class="work-card-client">乐高</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_034_img_18.jpg" alt="心意如花绽放">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#乐高</span></div>
+        <div class="work-card-title">心意如花绽放</div>
+        <div class="work-card-client">乐高</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_035_img_09.jpg" alt="新年许愿大法">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#乐高</span></div>
+        <div class="work-card-title">新年许愿大法</div>
+        <div class="work-card-client">乐高</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">艺人合作</div>
+      <div class="category-title-en">Artist Collaboration</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_047_img_09.jpg" alt="出发吧麦芬 × 杨超越">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#出发吧麦芬</span></div>
+        <div class="work-card-title">出发吧麦芬 × 杨超越</div>
+        <div class="work-card-client">杨超越</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_052_img_10.jpg" alt="浮生忆玲珑 × 罗云熙">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#浮生忆玲珑</span></div>
+        <div class="work-card-title">浮生忆玲珑 × 罗云熙</div>
+        <div class="work-card-client">罗云熙</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_053_img_12.jpg" alt="刘宇《漠》MV">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#刘宇</span></div>
+        <div class="work-card-title">刘宇《漠》MV</div>
+        <div class="work-card-client">刘宇</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_054_img_09.jpg" alt="NARS × 米卡">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#NARS</span></div>
+        <div class="work-card-title">NARS × 米卡</div>
+        <div class="work-card-client">NARS · 米卡</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_055_img_06.jpg" alt="DR.JART × 王嘉尔">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#DR.JART</span></div>
+        <div class="work-card-title">DR.JART × 王嘉尔</div>
+        <div class="work-card-client">王嘉尔</div>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="category-section">
+      <div class="category-title">其他作品</div>
+      <div class="category-title-en">Other Works</div>
+      <div class="works-grid"><div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_049_img_13.jpg" alt="钉钉《小美的三分钟挑战》">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#钉钉</span></div>
+        <div class="work-card-title">钉钉《小美的三分钟挑战》</div>
+        <div class="work-card-client">钉钉</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_056_img_07.jpg" alt="银华基金《致正在坚持的你》">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#银华基金</span></div>
+        <div class="work-card-title">银华基金《致正在坚持的你》</div>
+        <div class="work-card-client">银华基金</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_028_img_01.jpg" alt="抖音商城超级品类日">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#抖音商城</span></div>
+        <div class="work-card-title">抖音商城超级品类日</div>
+        <div class="work-card-client">抖音商城</div>
+      </div>
+    </div>
+<div class="work-card fade-in">
+      <img class="work-card-img" src="images/page_029_img_01.jpg" alt="SHEIN">
+      <div class="work-card-body">
+        <div class="work-card-tags"><span class="work-card-tag">#SHEIN</span></div>
+        <div class="work-card-title">SHEIN</div>
+        <div class="work-card-client">SHEIN</div>
+      </div>
+    </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section content-heavy" id="videos">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">06</div>
+      <h2 class="section-title">视频作品</h2>
+      <div class="section-subtitle">Motion Works</div>
+      <div class="divider"></div>
+    </div>
+    <div class="video-grid"><div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_037_img_16.jpg" alt="永劫无间劫杯宣传片" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">永劫无间劫杯宣传片</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_038_img_19.jpg" alt="永劫无间春季赛宣传片" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">永劫无间春季赛宣传片</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_043_img_11.jpg" alt="sugar robot 方糖机器人" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">sugar robot 方糖机器人</div>
+        <div class="video-card-type">产品视频</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_044_img_08.jpg" alt="极米《光影一日》" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">极米《光影一日》</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_045_img_03.jpg" alt="三国谋定天下 · 古力娜扎" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">三国谋定天下 · 古力娜扎</div>
+        <div class="video-card-type">宣传短片</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_046_img_08.jpg" alt="原神 5.0 宣传短片" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">原神 5.0 宣传短片</div>
+        <div class="video-card-type">宣传短片</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_047_img_09.jpg" alt="出发吧麦芬 × 杨超越" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">出发吧麦芬 × 杨超越</div>
+        <div class="video-card-type">系列短片</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_049_img_13.jpg" alt="钉钉《小美的三分钟挑战》" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">钉钉《小美的三分钟挑战》</div>
+        <div class="video-card-type">短片</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_050_img_08.jpg" alt="英雄联盟手游亚洲联赛决赛片" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">英雄联盟手游亚洲联赛决赛片</div>
+        <div class="video-card-type">决赛片</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_052_img_10.jpg" alt="浮生忆玲珑 × 罗云熙" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">浮生忆玲珑 × 罗云熙</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_053_img_12.jpg" alt="刘宇《漠》MV" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">刘宇《漠》MV</div>
+        <div class="video-card-type">MV</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_054_img_09.jpg" alt="NARS × 米卡" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">NARS × 米卡</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_055_img_06.jpg" alt="DR.JART × 王嘉尔" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">DR.JART × 王嘉尔</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_056_img_07.jpg" alt="银华基金《致正在坚持的你》" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">银华基金《致正在坚持的你》</div>
+        <div class="video-card-type">TVC</div>
+      </div>
+    </div>
+<div class="video-card fade-in" data-video-url="PLACEHOLDER_URL">
+      <div class="video-thumb-wrap">
+        <img src="images/page_039_img_07.jpg" alt="BEATBOT S1 PRO 泳池清洁机器人" onerror="this.style.background='#E8E8E8'">
+        <div class="video-play-icon"></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">BEATBOT S1 PRO 泳池清洁机器人</div>
+        <div class="video-card-type">产品视频</div>
+      </div>
+    </div>
+</div>
+  </div>
+</section>
+
+<section class="section" id="brands">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">07</div>
+      <h2 class="section-title">合作品牌</h2>
+      <div class="section-subtitle">Brands &amp; Artists</div>
+      <div class="divider"></div>
+    </div>
+    <div class="brands-grid">
+      <span class="brand-item">NetEase</span><span class="brand-item">Youku</span><span class="brand-item">Tencent</span><span class="brand-item">Xiaomi</span><span class="brand-item">NARS</span><span class="brand-item">Nestlé</span><span class="brand-item">XGIMI</span><span class="brand-item">Genshin Impact</span><span class="brand-item">LANCOME</span><span class="brand-item">MaxMara</span><span class="brand-item">LEGO</span><span class="brand-item">DingTalk</span><span class="brand-item">UR</span><span class="brand-item">SHEIN</span><span class="brand-item">Honor of Kings</span><span class="brand-item">BEATBOT</span>
+    </div>
+    <div class="artists-list">
+      <strong>合作艺人</strong><br>
+      黄晓明 · 王嘉尔 · 米卡 · 刘宇 · 罗云熙 · 邓伦 · 荣梓杉 · 杨超越 · 古力娜扎
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">08</div>
+      <h2 class="section-title">联系方式</h2>
+      <div class="section-subtitle">Get in Touch</div>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-name fade-in">陈智宇</div>
+    <div class="contact-info fade-in">18969534061（微信同号）</div>
+    <div class="contact-end fade-in">Thank you for watching</div>
+  </div>
+</section>
+
+
+<script>
+const dots=document.querySelectorAll('.nav-dots a');
+const sections=document.querySelectorAll('.section');
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){dots.forEach(d=>d.classList.remove('active'));const id=e.target.id;const dot=document.querySelector(`.nav-dots a[href="#${id}"]`);if(dot)dot.classList.add('active');const fades=e.target.querySelectorAll('.fade-in');fades.forEach(f=>f.classList.add('visible'))}})},{threshold:0.3});
+sections.forEach(s=>observer.observe(s));
+// Lightbox
+const lb=document.createElement('div');lb.className='lightbox';lb.innerHTML='<span class="lightbox-close">&times;</span><img>';document.body.appendChild(lb);
+const lbImg=lb.querySelector('img');const lbClose=lb.querySelector('.lightbox-close');
+document.querySelectorAll('.showcase-grid img, .work-card-img, .highlight-card-img').forEach(img=>{img.addEventListener('click',()=>{lbImg.src=img.src;lb.classList.add('active')})});
+lb.addEventListener('click',()=>lb.classList.remove('active'));lbClose.addEventListener('click',e=>{e.stopPropagation();lb.classList.remove('active')});
+// Video
+const vOverlay=document.createElement('div');vOverlay.className='video-player-overlay';vOverlay.innerHTML='<div class="video-player-wrapper"><iframe allow="autoplay; fullscreen" allowfullscreen></iframe><button class="video-close">&times;</button></div>';document.body.appendChild(vOverlay);
+const vIframe=vOverlay.querySelector('iframe');const vClose=vOverlay.querySelector('.video-close');
+document.querySelectorAll('.video-card').forEach(card=>{card.addEventListener('click',()=>{const url=card.dataset.videoUrl;if(url){vIframe.src=url;vOverlay.classList.add('active')}else{alert('视频链接待补充，请联系陈智宇获取完整作品视频。')}})});
+vClose.addEventListener('click',()=>{vOverlay.classList.remove('active');vIframe.src=''});
+vOverlay.addEventListener('click',e=>{if(e.target===vOverlay){vOverlay.classList.remove('active');vIframe.src=''}});
+</script>
+
+</body>
+</html>
